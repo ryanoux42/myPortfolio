@@ -1,0 +1,37 @@
+name: YoupiDevoirs Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check_build_client:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+
+    container:
+      image: node:alpine
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js  ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version:  ${{ matrix.node-version }}
+      - name: check linter portfolio
+        run: |
+          cd portfolio/
+          npm i
+          npm run lint
+      - name: Check if portfolio builds
+        run: |
+          cd portfolio/
+          npm i
+          npm run build

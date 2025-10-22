@@ -1,9 +1,9 @@
 import Link from "next/link";
 
+import { JSX } from "react/jsx-dev-runtime";
 import { FaLinkedin, FaGithub } from 'react-icons/fa6';
 
 import { NavLink } from "@/types";
-import { JSX } from "react/jsx-dev-runtime";
 
 interface SocialLink extends NavLink {
    icon: JSX.Element;

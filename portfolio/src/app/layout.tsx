@@ -17,9 +17,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ryan HERCULE - Portfolio",
   description: "Welcome to my personal portfolio website!",
-  icons: {
-    icon: "/logo.png",
-  },
 };
 
 export default function RootLayout({
@@ -34,7 +31,7 @@ export default function RootLayout({
       >
         <main>
           <Navigation />
-          {children}
+          <div className="ml-24 my-6">{children}</div>
           {/* put footer here */}
         </main>
       </body>

@@ -1,11 +1,25 @@
 import Link from "next/link";
-import Image from 'next/image';
+
+import { FaLinkedin, FaGithub } from 'react-icons/fa6';
 
 import { NavLink } from "@/types";
+import { JSX } from "react/jsx-dev-runtime";
 
-const navLinks: readonly NavLink[] = [
-  { name: "Github", link: "https://github.com/ryanoux42" },
-  { name: "Linkedin", link: "https://www.linkedin.com/in/ryan-hercule/" },
+interface SocialLink extends NavLink {
+   icon: JSX.Element;
+}
+
+const navLinks: readonly SocialLink[] = [
+  { 
+      name: "Github",
+      link: "https://github.com/ryanoux42",
+      icon: <FaGithub size={24} />,
+   },
+  { 
+      name: "Linkedin",
+      link: "https://www.linkedin.com/in/ryan-hercule/",
+      icon: <FaLinkedin size={24}/> 
+   },
 ] as const;
 
 function SocialLinkList() {
@@ -16,13 +30,11 @@ function SocialLinkList() {
             <Link
                href={link.link}
                prefetch={true}
+               target="_blank"
             >
-               <Image
-                  src={`icons/icon-${link.name.toLowerCase()}.svg`}
-                  alt={`${link.name}'s Logo`}
-                  width={36}
-                  height={36}
-               />
+               <span className="inline-block transform transition-transform duration-200 hover:scale-120 hover:text-blue-500">
+                  {link.icon}
+               </span>
             </Link>
          </li>
       ))}

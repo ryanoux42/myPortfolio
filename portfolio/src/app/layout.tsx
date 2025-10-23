@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <main>
           <Navigation />
-          <div className="ml-24 my-6">{children}</div>
+          <div className="ml-6 my-6">{children}</div>
           {/* put footer here */}
         </main>
       </body>

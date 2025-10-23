@@ -22,9 +22,9 @@ function Navbar() {
   };
 
   return (
-   <div className="flex">
+   <div className="flex space-x-4">
       <Logo />
-      <ul className="flex items-center space-x-4 text-sm">
+      <ul className="flex items-center space-x-2 text-sm">
       {navLinks.map((link) => (
          <li key={link.name}>
             <Link

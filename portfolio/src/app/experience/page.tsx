@@ -19,6 +19,31 @@ const experienceData: ExperienceCardInfo[] = [
       date: { start: new Date("2023-07-01"), end: new Date("2023-12-31") },
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       skills: ["Python", "PostgreSQL"],
+   },
+   {
+      colorBanner: "#f5633f",
+      company: "Jungle Bike",
+      companylogo: "jungle_bike.jpeg",
+      role: "Data Scientist",
+      date: { start: new Date("2023-07-01"), end: new Date("2023-12-31") },
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      skills: ["Python", "PostgreSQL"],
+   },{
+      colorBanner: "#f5633f",
+      company: "Jungle Bike",
+      companylogo: "jungle_bike.jpeg",
+      role: "Data Scientist",
+      date: { start: new Date("2023-07-01"), end: new Date("2023-12-31") },
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      skills: ["Python", "PostgreSQL"],
+   },{
+      colorBanner: "#f5633f",
+      company: "Jungle Bike",
+      companylogo: "jungle_bike.jpeg",
+      role: "Data Scientist",
+      date: { start: new Date("2023-07-01"), end: new Date("2023-12-31") },
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      skills: ["Python", "PostgreSQL"],
    }
 ]
 

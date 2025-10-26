@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="magicpattern antialiased flex flex-col font-sans">
         <main>
           <Navigation />
-          <div className="ml-6 my-6">{children}</div>
+          <div className="p-4 sm:p-6">{children}</div>
           <Footer />
         </main>
       </body>

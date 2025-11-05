@@ -8,11 +8,8 @@ const HOBBIES = [
 
 function IntroductionSection() {
    return (
-      <div className="flex justify-start grid-cols-2">
+      <div className="flex flex-wrap justify-start grid-cols-2">
          <div className="mx-auto w-4/10">
-            <h1 className="text-2xl text-text-secondary text-center">
-               Who I am
-            </h1>
             <p>
                Hi everyone! I’m Ryan HERCULE from Paris, France.<br />
                I’m a passionate and curious developer who loves turning ideas into functional applications.

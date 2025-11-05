@@ -40,7 +40,7 @@ export const SKILLS: SkillDataItem[] = [
    {name: "NestJS", icon: <SiNestjs /> },
    {name: "Next.js", icon: <SiNextdotjs /> },
    {name: "Tailwind CSS", icon: <SiTailwindcss /> },
-   {name: "HTML5", icon: <SiHtml5 /> },
-   {name: "CSS3", icon: <SiCss3 /> },
+   {name: "HTML", icon: <SiHtml5 /> },
+   {name: "CSS", icon: <SiCss3 /> },
    {name: "Express", icon: <SiExpress /> },
 ];

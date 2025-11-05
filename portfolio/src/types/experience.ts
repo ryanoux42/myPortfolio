@@ -4,11 +4,11 @@ export interface ExperienceDate {
 }
 
 export interface ExperienceCardInfo {
-   colorBanner: string;
    company: string;
    companylogo: string;
    role: string;
+   status: string;
    date: ExperienceDate;
-   desc: string;
+   desc: string[];
    skills?: string[];
 };

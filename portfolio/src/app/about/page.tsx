@@ -6,7 +6,10 @@ import SoftwareList from "@/components/About/Software/SoftwareList";
 function About() {
    return (
    <div className="w-full space-y-6">
-      <IntroductionSection />
+      <div className="justify-center">
+         <h1 className="text-2xl text-text-secondary font-bold mb-4">Want to know more about me</h1>
+         <IntroductionSection />
+      </div>
       <div className="justify-center text-center">
          <h1 className="text-2xl text-text-secondary font-semibold mb-4">Skill</h1>
          <SkillList />

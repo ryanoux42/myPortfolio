@@ -7,43 +7,15 @@ import Image from "next/image";
 import { ExperienceCardInfo, ExperienceDate } from "@/types";
 
 
-interface ExperienceCardBannerProps {
-  colorBanner: string;
+interface ExperienceCardHeaderProps {
   companyName: string;
   logoPath: string;
-}
-
-function ExperienceCardBanner({ colorBanner, companyName, logoPath }: ExperienceCardBannerProps) {
-
-  return (
-      <div
-        className="flex h-12 justify-start rounded-t-xl"
-        style={{ background: colorBanner }}
-      >
-        <div className="ml-4 mt-2">
-          <Image
-            src={`/${logoPath}`}
-            alt={companyName}
-            width={48}
-            height={48}
-            className="rounded-full border border-white ml-4 mt-2 mr-4 shadow-lg w-min-48 h-min-48"
-          />
-        </div>
-        {/* Title */}
-          <h5 className={"text-center text-2xl font-bold truncate text-white mt-2 ml-2"}>
-            {companyName}
-          </h5>
-      </div>
-  );
-}
-
-interface ExperienceCardRoleProps {
   role: string;
   date: ExperienceDate;
+  status: string;
 }
 
-function ExperienceCardRole({ role, date }: ExperienceCardRoleProps) {
-
+function ExperienceCardHeader({ companyName, logoPath, role, date, status }: ExperienceCardHeaderProps) {
   const formatDate = (date: ExperienceDate): string => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short' };
     const startDate = new Intl.DateTimeFormat('en-US', options).format(date.start);
@@ -54,6 +26,22 @@ function ExperienceCardRole({ role, date }: ExperienceCardRoleProps) {
 
   const dateString = formatDate(date);
   return (
+    <>
+      <div className="relative flex items-center h-16 px-4 space-x-4">
+        <Image
+          src={`/experience/${logoPath}`}
+          alt={companyName}
+          width={48}
+          height={48}
+          className="absolute rounded-full border border-black shadow-lg"
+        />
+        <div className="w-72 bg-gray-200 rounded-full">
+          <h5 className="text-xl text-center font-bold text-text-primary">
+            {companyName}
+          </h5>
+        </div>
+        <div className="text-red-500 text-sm bg-red-200 rounded-full p-2">{status}</div>
+      </div>
       <div className="flex flex-col justify-start space-x-6 p-4">
           <h5 className={`text-2xl font-bold text-black sm:text-l`}>
             {role}
@@ -62,6 +50,7 @@ function ExperienceCardRole({ role, date }: ExperienceCardRoleProps) {
             {dateString}
           </h5>
       </div>
+    </>
   );
 }
 
@@ -78,7 +67,7 @@ function ExperienceCardSkills({ skills }: ExperienceCardSkillsProps) {
         <div className="p-6">
           <div className="flex flex-wrap gap-2 justify-start">
             {skills.map((skill, index) => (
-              <span key={index} className="text-white text-sm bg-black rounded-full p-2">{skill}</span>
+              <span key={index} className="text-blue-primary text-sm bg-blue-secondary rounded-full p-2">{skill}</span>
             ))}
           </div>
         </div>
@@ -99,24 +88,22 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ cardInfo }: ExperienceCardProps) {
   return (
-    <div
-      className={"rounded-xl border p-0 transition-shadow duration-300 bg-white border-gray-200 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_30px_-10px_rgba(0,0,0,0.3)]"}
-    >
-      <ExperienceCardBanner
-        colorBanner={cardInfo.colorBanner}
+    <div className={"rounded-xl border bg-white border-gray-200"}>
+      <ExperienceCardHeader
         companyName={cardInfo.company}
         logoPath={cardInfo.companylogo}
-      />
-      <ExperienceCardRole
         role={cardInfo.role}
         date={cardInfo.date}
+        status={cardInfo.status}
       />
 
-      <div className="p-6">
-        <p className={`mt-4 text-center text-base text-gray-600`}>
-          {cardInfo.desc}
-        </p>
-      </div>
+      <ul className="list-disc pl-12 text-start text-base text-gray-600">
+        {cardInfo.desc.map((point, index) => (
+          <li key={index} className="mt-2">
+            {point}
+          </li>
+        ))}
+      </ul>
       {cardInfo.skills && cardInfo.skills.length > 0 && (
         <ExperienceCardSkills skills={cardInfo.skills} />
       )}

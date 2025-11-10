@@ -88,7 +88,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ cardInfo }: ExperienceCardProps) {
   return (
-    <div className={"rounded-xl border bg-white border-gray-200"}>
+    <div className={"rounded-xl border bg-white border-gray-200 px-2"}>
       <ExperienceCardHeader
         companyName={cardInfo.company}
         logoPath={cardInfo.companylogo}

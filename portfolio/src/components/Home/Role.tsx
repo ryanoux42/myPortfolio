@@ -8,7 +8,8 @@ function Role() {
       options={{
         strings: [
           "Software Developer",
-          "Student",
+          "Passionate Coder",
+          "Lifelong Learner",
         ],
         autoStart: true,
         loop: true,

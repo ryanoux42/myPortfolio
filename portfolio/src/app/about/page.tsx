@@ -2,24 +2,25 @@ import HardwareList from "@/components/About/Hardware/HardwareList";
 import IntroductionSection from "@/components/About/IntroductionSection";
 import SkillList from "@/components/About/Skill/SkillList";
 import SoftwareList from "@/components/About/Software/SoftwareList";
+import TitleSection from "@/components/TitleSection";
 
 function About() {
    return (
-   <div className="w-full space-y-6">
-      <div className="justify-center">
-         <h1 className="text-2xl text-text-secondary font-bold mb-4">Want to know more about me</h1>
+   <div className="w-full space-y-4">
+      <div>
+         <TitleSection title="Want to know more about me" />
          <IntroductionSection />
       </div>
-      <div className="justify-center text-center">
-         <h1 className="text-2xl text-text-secondary font-semibold mb-4">Skill</h1>
+      <div>
+         <TitleSection title="Skill" description="Languages and technologies" />
          <SkillList />
       </div>
-      <div className="justify-center text-center">
-         <h1 className="text-2xl text-text-secondary font-semibold mb-4">Software</h1>
+      <div>
+         <TitleSection title="Software" description="A showcase of software in my toolbox" />
          <SoftwareList />
       </div>
-      <div className="justify-center text-center">
-         <h1 className="text-2xl text-text-secondary font-semibold mb-4">Hardware</h1>
+      <div>
+         <TitleSection title="Hardware" description="A peek into my hardware" />
          <HardwareList />
       </div>
    </div>

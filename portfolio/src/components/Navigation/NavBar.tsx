@@ -11,6 +11,7 @@ const navLinks: readonly NavLink[] = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Experience", link: "/experience" },
+  { name: "Project", link: "/project" },
 ] as const;
 
 function Navbar() {

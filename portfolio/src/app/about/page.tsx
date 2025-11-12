@@ -11,15 +11,15 @@ function About() {
          <TitleSection title="Want to know more about me" />
          <IntroductionSection />
       </div>
-      <div>
+      <div className="flex flex-col items-center">
          <TitleSection title="Skill" description="Languages and technologies" />
          <SkillList />
       </div>
-      <div>
+      <div className="flex flex-col items-center">
          <TitleSection title="Software" description="A showcase of software in my toolbox" />
          <SoftwareList />
       </div>
-      <div>
+      <div className="flex flex-col items-center">
          <TitleSection title="Hardware" description="A peek into my hardware" />
          <HardwareList />
       </div>

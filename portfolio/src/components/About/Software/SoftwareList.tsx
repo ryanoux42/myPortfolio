@@ -3,8 +3,8 @@ import { TOOLS } from "./SoftwareData";
 
 function SoftwareList() {
    return (
-      <div className="mt-8">
-         <div className="grid gap-2 pr-4 grid-cols-3 md:grid-cols-5 space-y-12 md:space-y-8">
+      <div className="w-[80%]">
+         <div className="grid gap-2 pr-4 grid-cols-2 md:grid-cols-5 space-y-12 md:space-y-8">
          {TOOLS.map((tool) => (
            <div key={tool.title} className="group inline-block text-center place-items-center">
             <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">

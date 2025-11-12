@@ -40,10 +40,10 @@ function ExperienceCardHeader({ companyName, logoPath, role, date, status }: Exp
         <div className="text-red-500 text-sm bg-red-200 rounded-full p-2">{status}</div>
       </div>
       <div className="flex flex-col justify-start space-x-6 p-4">
-          <h5 className={`text-2xl font-bold text-black sm:text-l`}>
+          <h5 className={`text-2xl font-bold text-text-primary sm:text-l`}>
             {role}
           </h5>
-          <h5 className={`text-l font-semibold mt-3 text-gray-400 sm:text-xs`}>
+          <h5 className={`text-l font-semibold mt-3 text-text-tertiary sm:text-xs`}>
             {dateString}
           </h5>
       </div>
@@ -66,7 +66,7 @@ function ExperienceCard({ cardInfo }: ExperienceCardProps) {
         status={cardInfo.status}
       />
 
-      <ul className="list-disc pl-12 text-start text-base text-gray-600">
+      <ul className="list-disc pl-12 text-start text-base text-text-secondary">
         {cardInfo.desc.map((point, index) => (
           <li key={index} className="mt-2">
             {point}

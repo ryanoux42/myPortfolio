@@ -20,8 +20,8 @@ function SoftwareList() {
                />
                </div>
             </div>
-            <p className="mt-3 text-sm text-gray-500">{tool.title}</p>
-            <p className="absolute mt-1 text-xs text-gray-400 hidden group-hover:block">{tool.description}</p>
+            <p className="mt-3 text-sm text-text-primary">{tool.title}</p>
+            <p className="absolute mt-1 text-xs text-text-secondary hidden group-hover:block">{tool.description}</p>
             </div>
          ))}
          </div>

@@ -40,9 +40,9 @@ function ProjectList() {
         >
           <div className="flex flex-row gap-4">
             <GoRepo size={24} />
-            <h2 className="text-xl font-bold mb-4">{project.title}</h2>
+            <h2 className="text-xl font-bold text-text-primary mb-4">{project.title}</h2>
           </div>
-          <p>{project.description}</p>
+          <p className="text-text-secondary">{project.description}</p>
           {project.skills && project.skills.length > 0 && (
             <SkillList skills={project.skills} />
           )}

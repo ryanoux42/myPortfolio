@@ -14,7 +14,7 @@ const experienceData: ExperienceCardInfo[] = [
          "Integrated live and historical market data using Redis and PostgreSQL",
          "Built new admin site and optimized UI/UX across dashboards",
       ],
-      skills: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Redis", "CI/CD"],
+      skills: ["Web development", "Next.js", "NestJS", "TypeScript", "PostgreSQL", "Redis", "CI/CD"],
    },
    {
    company: "Jungle Bike",

@@ -31,6 +31,7 @@ function SocialLinkList() {
                href={link.link}
                prefetch={true}
                target="_blank"
+               rel="noopener noreferrer"
             >
                <span className="inline-block transform transition-transform duration-200 hover:scale-120 hover:text-blue-500">
                   {link.icon}

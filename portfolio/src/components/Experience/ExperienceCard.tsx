@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { ExperienceCardInfo, ExperienceDate } from "@/types";
+import SkillList from "../SkillList";
 
 
 interface ExperienceCardHeaderProps {
@@ -50,22 +51,6 @@ function ExperienceCardHeader({ companyName, logoPath, role, date, status }: Exp
   );
 }
 
-interface ExperienceCardSkillsProps {
-  skills: string[];
-}
-
-function ExperienceCardSkills({ skills }: ExperienceCardSkillsProps) {
-  return (
-    <div className="p-6">
-      <div className="flex flex-wrap gap-2 justify-start">
-        {skills.map((skill, index) => (
-          <span key={index} className="text-blue-primary text-xs bg-blue-secondary rounded-full p-2">{skill}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 interface ExperienceCardProps {
   cardInfo: ExperienceCardInfo;
 }
@@ -89,7 +74,7 @@ function ExperienceCard({ cardInfo }: ExperienceCardProps) {
         ))}
       </ul>
       {cardInfo.skills && cardInfo.skills.length > 0 && (
-        <ExperienceCardSkills skills={cardInfo.skills} />
+        <SkillList skills={cardInfo.skills} />
       )}
     </div>
   );

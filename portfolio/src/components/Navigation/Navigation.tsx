@@ -1,13 +1,22 @@
-import SocialLinkList from "@/components/SocialLinkList";
+import Logo from "./Logo";
+import DesktopNavbar from "./DesktopNavBar";
+import MobileNavBar from "./MobileNavBar";
+import { NavLink } from "@/types/navigation";
 
-import Navbar from "./NavBar";
+const navLinks: readonly NavLink[] = [
+  { name: "Home", link: "/" },
+  { name: "About", link: "/about" },
+  { name: "Experience", link: "/experience" },
+  { name: "Project", link: "/project" },
+] as const;
 
 function Navigation() {
   return (
     <header role="banner">
-      <nav className="h-16 w-full px-4 flex justify-between items-center">
-         <Navbar />
-         <SocialLinkList />
+      <nav className="h-16 w-full px-4 flex items-center">
+         <Logo />
+         <DesktopNavbar navLinks={navLinks} />
+          <MobileNavBar navLinks={navLinks} />
       </nav>
     </header>
   );

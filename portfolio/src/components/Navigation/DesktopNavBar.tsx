@@ -4,17 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { NavLink } from "@/types";
+import SocialLinkList from "../SocialLinkList";
 
-import Logo from "./Logo";
+interface DesktopNavbarProps {
+  navLinks: readonly NavLink[];
+}
 
-const navLinks: readonly NavLink[] = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Experience", link: "/experience" },
-  { name: "Project", link: "/project" },
-] as const;
-
-function Navbar() {
+function DesktopNavbar({ navLinks }: DesktopNavbarProps) {
    const path = usePathname();
 
   const getSelectedPageClass = (link: string): string => {
@@ -23,8 +19,7 @@ function Navbar() {
   };
 
   return (
-   <div className="flex space-x-4">
-      <Logo />
+   <div className="w-full hidden md:flex px-4 justify-between gap-x-6">
       <ul className="flex items-center space-x-2 text-sm text-text-primary">
       {navLinks.map((link) => (
          <li key={link.name}>
@@ -38,9 +33,10 @@ function Navbar() {
          </li>
       ))}
       </ul>
+      <SocialLinkList />
    </div>
 
   );
 };
 
-export default Navbar;
+export default DesktopNavbar;

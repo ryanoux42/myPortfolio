@@ -15,6 +15,8 @@ function ButtonWithLink({ text, link, icon, download }: ButtonWithLinkProps) {
       <Link
         href={link}
         download={download}
+        target={download ? undefined : "_blank"}
+        rel={download ? undefined : "noopener noreferrer"}
         className="flex items-center space-x-2"
       >
         {icon}

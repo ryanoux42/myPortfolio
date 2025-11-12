@@ -7,7 +7,7 @@ function Project() {
       <div>
         <TitleSection title="Projects" description="A showcase of my projects" />
         <ProjectList />
-        <div className="flex justify-center text-2xl mt-6 mb-6 hover:text-blue-500 hover:underline">
+        <div className="flex justify-center text-xl text-text-secondary mt-6 mb-4 hover:text-blue-500 hover:underline">
          <Link
             href="https://github.com/ryanoux42?tab=repositories"
             target="_blank"

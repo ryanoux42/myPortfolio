@@ -6,8 +6,8 @@ function Home() {
   return (
     <div className="flex flex-col space-y-8 md:flex-row justify-between items-center sm:p-16 sm:mb-20 sm:mx-12"> 
       <div className="flex flex-col items-start space-y-12">
-        <div className="mx-auto max-w-2xl text-left font-medium leading-tight tracking-tighter text-text-primary text-6xl">
-          <h1>
+        <div className="mx-auto max-w-2xl text-left text-6xl font-medium leading-tight tracking-tighter">
+          <h1 className="text-text-primary">
             Hi! 👋🏻<br />
             <span className="text-dark-blue">Ryan HERCULE</span>
           </h1>

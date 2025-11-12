@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 import Image from "next/image";
 
 import { ExperienceCardInfo, ExperienceDate } from "@/types";
@@ -59,26 +55,14 @@ interface ExperienceCardSkillsProps {
 }
 
 function ExperienceCardSkills({ skills }: ExperienceCardSkillsProps) {
-  const [showDetails, setShowDetails] = useState(false);
-
   return (
-    <>
-      {showDetails && (
-        <div className="p-6">
-          <div className="flex flex-wrap gap-2 justify-start">
-            {skills.map((skill, index) => (
-              <span key={index} className="text-blue-primary text-sm bg-blue-secondary rounded-full p-2">{skill}</span>
-            ))}
-          </div>
-        </div>
-      )}
-      <button
-        className="w-full text-gray-300 font-semibold py-2 rounded-b-xl hover:text-black transition-colors duration-200"
-        onClick={() => setShowDetails(!showDetails)}
-      >
-        {showDetails ? "Hide Skills" : "Show Skills"}
-      </button>
-    </>
+    <div className="p-6">
+      <div className="flex flex-wrap gap-2 justify-start">
+        {skills.map((skill, index) => (
+          <span key={index} className="text-blue-primary text-xs bg-blue-secondary rounded-full p-2">{skill}</span>
+        ))}
+      </div>
+    </div>
   );
 }
 

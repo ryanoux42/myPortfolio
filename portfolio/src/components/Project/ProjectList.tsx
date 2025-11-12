@@ -38,9 +38,9 @@ function ProjectList() {
           key={index}
           className="flex flex-col rounded-xl border border-gray-200 p-4 min-h-64"
         >
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row items-center gap-4 mb-4">
             <GoRepo size={24} />
-            <h2 className="text-xl font-bold text-text-primary mb-4">{project.title}</h2>
+            <h2 className="text-xl font-bold text-text-primary">{project.title}</h2>
           </div>
           <p className="text-text-secondary">{project.description}</p>
           {project.skills && project.skills.length > 0 && (

@@ -3,7 +3,7 @@ import ButtonWithLink from "@/components/Button/ButtonWithLink";
 import { FiDownload } from "react-icons/fi";
 import { HiOutlineMail } from 'react-icons/hi';
 
-const CV_LINK = "https://drive.google.com/file/d/1EC9aEL3pz0cYjzq40ZMf1x6NV8wj5x6H/view?usp=sharing";
+const CV_LINK = "https://drive.google.com/file/d/1u8qMDBxg1xEP9BF_Lso6u4peXGKyxHpb/view?usp=sharing";
 
 function ReachMeSection() {
   return (

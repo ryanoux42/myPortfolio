@@ -9,7 +9,7 @@ const HOBBIES = [
 function IntroductionSection() {
    return (
       <div className="flex flex-col md:flex-row items-center space-y-4">
-         <div className="mx-auto w-4/10">
+         <div className="mx-auto w-4/5 md:w-4/10">
             <p>
                Hi everyone! I’m Ryan HERCULE from Paris, France.<br />
                I’m a passionate and curious developer who loves turning ideas into functional applications.

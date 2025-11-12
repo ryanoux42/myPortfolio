@@ -33,7 +33,7 @@ const experienceData: ExperienceCardInfo[] = [
 
 function ExperienceList() {
   return (
-    <div className="items-center relative flex flex-col justify-start space-y-6 sm:min-w-[60%]">
+    <div className="flex flex-col space-y-6 w-full items-center">
       {experienceData.map((cardInfo, index) => (
         <div key={index} className="relative flex ml-4 items-start space-y-4">
           <ExperienceCard cardInfo={cardInfo} />

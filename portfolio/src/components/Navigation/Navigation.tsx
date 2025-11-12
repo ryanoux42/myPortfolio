@@ -14,9 +14,9 @@ function Navigation() {
   return (
     <header role="banner">
       <nav className="h-16 w-full px-4 flex items-center">
-         <Logo />
-         <DesktopNavbar navLinks={navLinks} />
-          <MobileNavBar navLinks={navLinks} />
+        <Logo />
+        <DesktopNavbar navLinks={navLinks} />
+        <MobileNavBar navLinks={navLinks} />
       </nav>
     </header>
   );

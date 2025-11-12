@@ -6,17 +6,15 @@ interface ButtonWithLinkProps {
    text: string;
    link: string;
    icon: JSX.Element;
-   download?: boolean;
 }
 
-function ButtonWithLink({ text, link, icon, download }: ButtonWithLinkProps) {
+function ButtonWithLink({ text, link, icon }: ButtonWithLinkProps) {
   return (
     <button className="inline-block rounded-xl text-l bg-blue-primary px-5 py-2 text-white border border-transparent hover:bg-blue-secondary hover:text-blue-primary hover:border-blue-primary transition-colors duration-200">
       <Link
         href={link}
-        download={download}
-        target={download ? undefined : "_blank"}
-        rel={download ? undefined : "noopener noreferrer"}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center space-x-2"
       >
         {icon}

@@ -4,22 +4,20 @@ import Role from "@/components/Home/Role";
 
 function Home() {
   return (
-    <div className="flex flex-wrap justify-between items-center sm:p-16 sm:mb-20 sm:mx-12"> 
-      <div className="flex flex-col space-y-12">
-        <div className="mx-auto max-w-2xl text-left text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl">
+    <div className="flex flex-col space-y-8 md:flex-row justify-between items-center sm:p-16 sm:mb-20 sm:mx-12"> 
+      <div className="flex flex-col items-start space-y-12">
+        <div className="mx-auto max-w-2xl text-left font-medium leading-tight tracking-tighter text-text-primary text-6xl">
           <h1>
             Hi! 👋🏻<br />
             <span className="text-dark-blue">Ryan HERCULE</span>
           </h1>
         </div>
-        <div className="text-dark-blue text-2xl">
+        <div className="text-dark-blue text-4xl">
           <Role />
         </div>
         <ReachMeSection />
       </div>
-      <div className="pr-24">
-        <ProfilePic />
-      </div>
+      <ProfilePic />
     </div>
   );
 }

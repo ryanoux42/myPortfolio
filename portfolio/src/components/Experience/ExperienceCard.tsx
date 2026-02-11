@@ -32,8 +32,8 @@ function ExperienceCardHeader({ companyName, logoPath, role, date, status }: Exp
           height={48}
           className="absolute rounded-full border border-black shadow-lg"
         />
-        <div className="w-72 bg-gray-200 rounded-full">
-          <h5 className="text-xl text-center font-bold text-text-primary">
+        <div className="w-54 bg-gray-200 rounded-full">
+          <h5 className="text-xl pl-16 font-bold text-text-primary">
             {companyName}
           </h5>
         </div>

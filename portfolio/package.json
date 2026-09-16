@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "cd .. && git config core.hooksPath portfolio/.husky/_"
+    "prepare": "cd .. && git config core.hooksPath portfolio/.husky/_ || true"
   },
   "dependencies": {
     "next": "^16.0.7",

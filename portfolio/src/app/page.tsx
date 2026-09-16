@@ -8,7 +8,7 @@ function Home() {
       <div className="flex flex-col items-start space-y-12">
         <div className="mx-auto max-w-2xl text-left text-6xl font-medium leading-tight tracking-tighter">
           <h1 className="text-text-primary">
-            Hi! 👋🏻<br />
+            Hi! 👋🏾<br />
             <span className="text-dark-blue">Ryan HERCULE</span>
           </h1>
         </div>

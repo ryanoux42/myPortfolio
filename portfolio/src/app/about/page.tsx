@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 function About() {
    return (
-   <div className="w-full space-y-4">
-      <div>
+   <div className="w-full space-y-12 sm:space-y-16">
+      <div className="flex flex-col items-center">
          <TitleSection title="Want to know more about me" />
          <IntroductionSection />
       </div>

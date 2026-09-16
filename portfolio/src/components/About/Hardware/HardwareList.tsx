@@ -1,3 +1,5 @@
+import { FiArrowUpRight } from "react-icons/fi";
+
 import { HARDWARES } from "./HardwareData";
 
 function HardwareList() {
@@ -8,10 +10,10 @@ function HardwareList() {
            <div
             key={hardware.title}
             className="
-              relative p-4 border border-border-primary rounded-lg
-              hover:shadow-lg transition-shadow duration-200
-              flex flex-col justify-between
-              h-full sm:min-h-36 min-h-8
+              relative flex h-full min-h-8 flex-col justify-between
+              rounded-2xl border border-border-primary bg-bg-primary p-5
+              shadow-sm transition-shadow duration-300 hover:shadow-md
+              sm:min-h-36
             "
           >
             <div>
@@ -27,9 +29,10 @@ function HardwareList() {
                 href={hardware.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-primary hover:underline"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-blue-primary transition-colors duration-200 hover:underline"
               >
                 Learn More
+                <FiArrowUpRight size={16} />
               </a>
             </div>
           </div>

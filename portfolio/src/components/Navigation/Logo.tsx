@@ -4,7 +4,7 @@ import Image from 'next/image';
 function Logo() {
 
   return (
-   <Link href="/" aria-label="Home">
+   <Link href="/" aria-label="Home" className="transition-transform duration-200 hover:scale-105">
       <Image
          src="/logo.png"
          alt="Ryan HERCULE's Logo"

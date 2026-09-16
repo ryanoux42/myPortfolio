@@ -8,19 +8,19 @@ const HOBBIES = [
 
 function IntroductionSection() {
    return (
-      <div className="mx-auto flex w-4/5 flex-col items-center gap-8 md:w-full md:flex-row md:items-center md:justify-center md:gap-12">
-         <div className="w-full max-w-md text-text-primary md:w-4/10">
+      <div className="mx-auto flex w-4/5 max-w-3xl flex-col items-center gap-8 md:flex-row md:items-center md:justify-center md:gap-12">
+         <div className="w-full max-w-md text-text-primary">
             <p className="text-lg leading-relaxed">
-               Hi everyone! I’m Ryan HERCULE from Paris, France.<br />
+               Hi everyone! I’m <span className="font-semibold text-blue-primary">Ryan HERCULE</span> from Paris, France.<br />
                I’m a passionate and curious developer who loves turning ideas into functional applications.
             </p>
 
-            <p className="mt-4 mb-2 text-lg leading-relaxed">Outside of coding, I love engaging in activities that help me refresh my mind and keep growing personally:</p>
-            <ul className="ml-4 list-inside list-disc space-y-2 text-text-secondary">
+            <p className="mt-6 mb-3 text-lg leading-relaxed">Outside of coding, I love engaging in activities that help me refresh my mind and keep growing personally:</p>
+            <ul className="flex flex-wrap gap-2">
                {HOBBIES.map((hobby) => (
                   <li
                      key={hobby}
-                     className="gap-2"
+                     className="rounded-full border border-border-primary px-4 py-2 text-sm font-medium text-text-secondary transition-all duration-200 hover:scale-105 hover:border-transparent hover:bg-blue-secondary hover:text-blue-primary"
                   >
                      {hobby}
                   </li>

@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
+
 import HardwareList from "@/components/About/Hardware/HardwareList";
 import IntroductionSection from "@/components/About/IntroductionSection";
 import SkillList from "@/components/About/Skill/SkillList";
 import SoftwareList from "@/components/About/Software/SoftwareList";
 import TitleSection from "@/components/TitleSection";
+
+export const metadata: Metadata = {
+   title: "About",
+   description: "Learn more about Ryan HERCULE: a software developer based in Paris, France, his skills, software, and hardware.",
+   alternates: {
+      canonical: "/about",
+   },
+};
 
 function About() {
    return (

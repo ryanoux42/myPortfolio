@@ -23,31 +23,31 @@ function ExperienceCardHeader({ companyName, logoPath, role, date, status }: Exp
 
   const dateString = formatDate(date);
   return (
-    <>
-      <div className="relative flex items-center h-16 px-4 space-x-4">
+    <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex items-center gap-4">
         <Image
           src={`/experience/${logoPath}`}
           alt={companyName}
           width={48}
           height={48}
-          className="absolute rounded-full border border-black shadow-lg"
+          className="rounded-full border border-border-primary shadow-sm"
         />
-        <div className="w-54 bg-gray-200 rounded-full">
-          <h5 className="text-xl pl-16 font-bold text-text-primary">
+        <div className="flex flex-col gap-1">
+          <h5 className="text-lg font-bold text-text-primary sm:text-xl">
             {companyName}
           </h5>
-        </div>
-        <div className="text-red-500 text-sm bg-red-200 rounded-full p-2">{status}</div>
-      </div>
-      <div className="flex flex-col justify-start space-x-6 p-4">
-          <h5 className={`text-2xl font-bold text-text-primary sm:text-l`}>
+          <h5 className="text-base font-semibold text-text-secondary sm:text-lg">
             {role}
           </h5>
-          <h5 className={`text-l font-semibold mt-3 text-text-tertiary sm:text-xs`}>
+          <h5 className="text-xs font-medium text-text-tertiary sm:text-sm">
             {dateString}
           </h5>
+        </div>
       </div>
-    </>
+      <div className="self-start rounded-full bg-red-200 px-3 py-1 text-xs font-semibold text-red-500 sm:self-center">
+        {status}
+      </div>
+    </div>
   );
 }
 
@@ -57,7 +57,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ cardInfo }: ExperienceCardProps) {
   return (
-    <div className={"w-4/5 md:w-full rounded-xl border bg-white border-gray-200 px-2"}>
+    <div className="w-4/5 rounded-2xl border border-border-primary bg-bg-primary shadow-sm transition-shadow duration-300 hover:shadow-md md:w-full">
       <ExperienceCardHeader
         companyName={cardInfo.company}
         logoPath={cardInfo.companylogo}
@@ -66,11 +66,9 @@ function ExperienceCard({ cardInfo }: ExperienceCardProps) {
         status={cardInfo.status}
       />
 
-      <ul className="list-disc pl-12 text-start text-base text-text-secondary">
+      <ul className="list-disc space-y-2 px-9 pb-5 text-start text-base text-text-secondary">
         {cardInfo.desc.map((point, index) => (
-          <li key={index} className="mt-2">
-            {point}
-          </li>
+          <li key={index}>{point}</li>
         ))}
       </ul>
       {cardInfo.skills && cardInfo.skills.length > 0 && (

@@ -32,21 +32,21 @@ const PROJECTS = [
 
 function ProjectList() {
    return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
       {PROJECTS.map((project, index) => (
         <div
           key={index}
-          className="flex flex-col rounded-xl border border-gray-200 p-4 min-h-64"
+          className="flex min-h-64 flex-col rounded-2xl border border-border-primary bg-bg-primary p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
         >
-          <div className="flex flex-row items-center gap-4 mb-4">
-            <GoRepo size={24} />
+          <div className="mb-3 flex flex-row items-center gap-3">
+            <GoRepo className="text-blue-primary" size={22} />
             <h2 className="text-xl font-bold text-text-primary">{project.title}</h2>
           </div>
           <p className="text-text-secondary">{project.description}</p>
           {project.skills && project.skills.length > 0 && (
             <SkillList skills={project.skills} />
           )}
-          <div className="self-end">
+          <div className="mt-auto self-end pt-4">
             <ButtonWithLink
               text="See code Source"
               link={project.link}

@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
+
 import ExperienceList from "@/components/Experience/ExperienceList";
 import TitleSection from "@/components/TitleSection";
 
+export const metadata: Metadata = {
+   title: "Experience",
+   description: "Ryan HERCULE's professional journey as a software developer.",
+   alternates: {
+      canonical: "/experience",
+   },
+};
 
 function Experience() {
    return (

@@ -12,7 +12,7 @@ const navLinks: readonly NavLink[] = [
 
 function Navigation() {
   return (
-    <header role="banner">
+    <header role="banner" className="sticky top-0 z-50 border-b border-border-primary bg-background/70 backdrop-blur-md">
       <nav className="h-16 w-full px-4 flex items-center">
         <Logo />
         <DesktopNavbar navLinks={navLinks} />

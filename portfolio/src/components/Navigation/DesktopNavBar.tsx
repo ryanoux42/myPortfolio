@@ -14,8 +14,8 @@ function DesktopNavbar({ navLinks }: DesktopNavbarProps) {
    const path = usePathname();
 
   const getSelectedPageClass = (link: string): string => {
-   const style = "font-medium hover:text-blue-primary flex h-8 w-full items-center justify-center p-4";
-    return path === link ? `${style} text-blue-primary bg-blue-secondary rounded-full` : `${style} text-text-primary`;
+   const style = "font-medium hover:text-blue-primary transition-colors duration-200 flex h-8 w-full items-center justify-center px-4 rounded-full";
+    return path === link ? `${style} text-blue-primary bg-blue-secondary` : `${style} text-text-primary`;
   };
 
   return (

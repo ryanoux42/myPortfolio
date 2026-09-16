@@ -6,7 +6,9 @@ function Footer () {
       <p className="text-gray-500">
          © {new Date().getFullYear()} Ryan HERCULE
       </p>
-      <SocialLinkList />
+      <div className="md:hidden">
+        <SocialLinkList />
+      </div>
     </footer>
   );
 }

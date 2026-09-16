@@ -89,9 +89,9 @@ export default function RootLayout({
             }),
           }}
         />
-        <main>
+        <main className="flex min-h-screen flex-col">
           <Navigation />
-          <div className="p-4 sm:p-6">{children}</div>
+          <div className="flex-1 p-4 sm:p-6">{children}</div>
           <Footer />
         </main>
       </body>

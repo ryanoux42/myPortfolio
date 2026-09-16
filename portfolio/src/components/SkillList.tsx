@@ -4,12 +4,10 @@
 
 function SkillList({ skills }: SkillListProps) {
   return (
-    <div className="p-6">
-      <div className="flex flex-wrap gap-2 justify-start">
-        {skills.map((skill, index) => (
-          <span key={index} className="text-blue-primary text-xs bg-blue-secondary rounded-full p-2">{skill}</span>
-        ))}
-      </div>
+    <div className="flex flex-wrap justify-start gap-2">
+      {skills.map((skill, index) => (
+        <span key={index} className="rounded-full bg-blue-secondary px-3 py-1 text-xs font-medium text-blue-primary">{skill}</span>
+      ))}
     </div>
   );
 }

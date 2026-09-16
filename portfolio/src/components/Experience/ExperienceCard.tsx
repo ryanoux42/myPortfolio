@@ -66,13 +66,15 @@ function ExperienceCard({ cardInfo }: ExperienceCardProps) {
         status={cardInfo.status}
       />
 
-      <ul className="list-disc space-y-2 px-9 pb-5 text-start text-base text-text-secondary">
+      <ul className="list-disc space-y-2 px-9 pb-3 text-start text-base text-text-secondary">
         {cardInfo.desc.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
       </ul>
       {cardInfo.skills && cardInfo.skills.length > 0 && (
-        <SkillList skills={cardInfo.skills} />
+        <div className="px-9 pb-5">
+          <SkillList skills={cardInfo.skills} />
+        </div>
       )}
     </div>
   );

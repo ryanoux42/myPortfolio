@@ -1,6 +1,6 @@
-import ButtonWithLink from "../Button/ButtonWithLink";
 import { CiShare1 } from "react-icons/ci";
-import { GoRepo } from "react-icons/go";
+
+import ButtonWithLink from "../Button/ButtonWithLink";
 import SkillList from "../SkillList";
 
 const PROJECTS = [
@@ -36,17 +36,14 @@ function ProjectList() {
       {PROJECTS.map((project, index) => (
         <div
           key={index}
-          className="flex min-h-64 flex-col rounded-2xl border border-border-primary bg-bg-primary p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+          className="flex min-h-64 flex-col gap-3 rounded-2xl border border-border-primary bg-bg-primary p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
         >
-          <div className="mb-3 flex flex-row items-center gap-3">
-            <GoRepo className="text-blue-primary" size={22} />
-            <h2 className="text-xl font-bold text-text-primary">{project.title}</h2>
-          </div>
+          <h2 className="text-xl font-bold text-text-primary">{project.title}</h2>
           <p className="text-text-secondary">{project.description}</p>
           {project.skills && project.skills.length > 0 && (
             <SkillList skills={project.skills} />
           )}
-          <div className="mt-auto self-end pt-4">
+          <div className="mt-auto self-end pt-2">
             <ButtonWithLink
               text="See code Source"
               link={project.link}

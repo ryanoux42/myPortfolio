@@ -4,6 +4,7 @@ description: "Egg coffee in the Old Quarter, a train through a street, a citadel
 date: "2026-03-08"
 cover: "/blog/hanoi/cover.jpg"
 tags: ["Travel", "Vietnam", "Hanoi"]
+favorite: false
 draft: false
 ---
 

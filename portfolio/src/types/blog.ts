@@ -5,6 +5,7 @@ export interface BlogPostMeta {
    date: Date;
    cover: string;
    tags: string[];
+   favorite: boolean;
    readingTime: number;
 }
 

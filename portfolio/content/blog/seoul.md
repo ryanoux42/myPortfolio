@@ -4,6 +4,7 @@ description: "A short trip north for a friend's birthday — one palace, one nig
 date: "2025-11-23"
 cover: "/blog/seoul/cover.jpg"
 tags: ["Travel", "South Korea", "Seoul"]
+favorite: false
 draft: false
 ---
 

@@ -4,6 +4,7 @@ description: "Towers, caves, mosques and three cultures in one city — plus a d
 date: "2026-01-10"
 cover: "/blog/kuala-lumpur/cover.jpg"
 tags: ["Travel", "Malaysia", "Kuala Lumpur", "Malacca"]
+favorite: false
 draft: false
 ---
 

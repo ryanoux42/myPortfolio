@@ -1,9 +1,10 @@
 ---
 title: "Four days in Chiang Rai"
-description: "White temples, a tea plantation, a long-neck Karen village and an accidental detour into a military base — four days in northern Thailand, on foot."
+description: "White temples, a tea plantation, a long-neck Karen village and an accidental detour into a forest — four days in northern Thailand, on foot."
 date: "2025-09-14"
 cover: "/blog/chiang-rai/cover.jpg"
 tags: ["Travel", "Thailand", "Chiang Rai"]
+favorite: true
 draft: false
 ---
 
@@ -63,10 +64,10 @@ food. Both are worth doing; the Saturday one if you have to pick.
 ## Sunday — the forest, and a wrong turn
 
 The last morning was backpacking through the forest outside town to reach a
-temple, which went well until the trail stopped being a trail and I walked
-straight into **a military base** without realising it. It ended with a polite
-escort back out and no drama, but: check the map before following a path that
-looks like a shortcut.
+temple, which went well until the trail stopped being a trail and **I got lost
+in the forest**. It took a while to backtrack and find the path again, but I
+eventually made it out with no drama — check the map before following a path
+that looks like a shortcut.
 
 The afternoon was the **Chiang Rai Contemporary Art Museum**, a calm place to
 finish, and then the walk to the airport — which is doable, flat, and gives you a

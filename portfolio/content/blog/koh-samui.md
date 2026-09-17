@@ -4,6 +4,7 @@ description: "Twelve hours of travel, a full moon party, a day at sea and more t
 date: "2025-08-11"
 cover: "/blog/koh-samui/cover.jpg"
 tags: ["Travel", "Thailand", "Koh Samui"]
+favorite: false
 draft: false
 ---
 

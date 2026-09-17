@@ -12,11 +12,33 @@ function BlogList({ posts }: BlogListProps) {
     );
   }
 
+  const favoritePosts = posts.filter((post) => post.favorite);
+  const otherPosts = posts.filter((post) => !post.favorite);
+
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-      {posts.map((post) => (
-        <BlogCard key={post.slug} post={post} />
-      ))}
+    <div className="flex flex-col gap-10">
+      {favoritePosts.length > 0 && (
+        <section className="flex flex-col gap-4">
+          <h2 className="text-lg font-bold text-text-secondary">Favorites</h2>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            {favoritePosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </section>
+      )}
+      {otherPosts.length > 0 && (
+        <section className="flex flex-col gap-4">
+          {favoritePosts.length > 0 && (
+            <h2 className="text-lg font-bold text-text-secondary">All posts</h2>
+          )}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {otherPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

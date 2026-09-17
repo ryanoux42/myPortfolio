@@ -15,6 +15,7 @@ interface BlogFrontMatter {
    date: string;
    cover: string;
    tags?: string[];
+   favorite?: boolean;
    draft?: boolean;
 }
 
@@ -45,6 +46,7 @@ function readPost(slug: string): BlogPost | null {
       date: new Date(frontMatter.date),
       cover: frontMatter.cover,
       tags: frontMatter.tags ?? [],
+      favorite: frontMatter.favorite ?? false,
       readingTime: computeReadingTime(content),
    };
 

@@ -4,6 +4,7 @@ description: "A capital that doesn't hide its history, and two days of temples b
 date: "2025-12-17"
 cover: "/blog/cambodia/cover.jpg"
 tags: ["Travel", "Cambodia", "Angkor"]
+favorite: false
 draft: false
 ---
 

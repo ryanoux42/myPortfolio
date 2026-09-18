@@ -4,7 +4,7 @@ import { getPostSlugs } from "@/lib/blog";
 
 const SITE_URL = "https://ryan-hercule.vercel.app";
 
-const ROUTES = ["", "/about", "/experience", "/project", "/blog"] as const;
+const ROUTES = ["", "/about", "/experience", "/project", "/blog", "/food"] as const;
 
 function sitemap(): MetadataRoute.Sitemap {
    const staticRoutes = ROUTES.map((route) => ({

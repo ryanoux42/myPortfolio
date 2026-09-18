@@ -9,6 +9,7 @@ const navLinks: readonly NavLink[] = [
   { name: "Experience", link: "/experience" },
   { name: "Project", link: "/project" },
   { name: "Blog", link: "/blog" },
+  { name: "Food", link: "/food" },
 ] as const;
 
 function Navigation() {

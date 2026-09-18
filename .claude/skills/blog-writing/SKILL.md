@@ -75,7 +75,7 @@ Replace the raw note file in place with the finished post. It must open with:
 ```yaml
 ---
 title: "Three cold days in Seoul"
-description: "A short trip north for a friend's birthday — one palace, one night out in Hongdae, and a borrowed jacket."
+description: "A short trip north for a friend's birthday, one palace, one night out in Hongdae, and a borrowed jacket."
 date: "2025-11-23"
 cover: "/blog/seoul/cover.jpg"
 tags: ["Travel", "South Korea", "Seoul"]
@@ -86,8 +86,8 @@ draft: false
 - `title` — English, plain, usually built on the length of the trip
   ("Five days in Hanoi", "Four days in Chiang Rai"). No colons-and-subtitles.
 - `description` — one sentence, concrete, listing two or three real things from
-  the trip rather than adjectives. An em dash to join clauses fits the house
-  style.
+  the trip rather than adjectives. Join clauses with a comma or a colon, never
+  an em dash (see the hard rule on punctuation below).
 - `date` — the **last day** of the trip, `YYYY-MM-DD`. The blog sorts newest
   first on this field.
 - `cover` — `/blog/<slug>/cover.jpg`, the web path, not the filesystem path.
@@ -123,6 +123,8 @@ Voice:
 - **Bold** the first mention of a significant place.
 - Around 300–600 words. These are short reads, not guides.
 - Hard-wrap at roughly 80 columns to match the other files.
+- Never use an em dash (the "—" character) anywhere in the post, front matter
+  included. Use a comma, a colon, a period, or two sentences instead.
 
 The one hard rule: **do not invent things that did not happen.** The notes are
 sparse and the temptation is to fill the gaps with plausible detail — invented
